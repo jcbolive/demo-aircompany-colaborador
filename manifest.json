@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "api_version": 3,
   "default_locale": "pt-br",
-  "private": false,
   "settings": [
     {
       "label": "Brand",

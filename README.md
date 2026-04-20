@@ -29,3 +29,7 @@ Tema customizado da Central de Ajuda para o ambiente Zendesk Guide, com identida
 
 - Zendesk Developer Docs (customização de temas): https://developer.zendesk.com/documentation/help_center/#customizing-help-center-themes
 - Integração GitHub com tema do Guide (PT-BR): https://support.zendesk.com/hc/pt-br/articles/4408832476698-Configura%C3%A7%C3%A3o-da-integra%C3%A7%C3%A3o-do-GitHub-com-seu-tema-do-Guide
+
+## Troubleshooting de importação
+
+Se aparecer o erro `manifest.json` com **"additional properties ['private']"**, remova a chave `private` do arquivo. O schema de tema do Guide não aceita essa propriedade.
