@@ -1,0 +1,13 @@
+<section class="quick-links">
+  <div class="container">
+    <h1>{{category.name}}</h1>
+    <div class="cards">
+      {{#each sections}}
+        <article class="card">
+          <h3><a href="{{url}}">{{name}}</a></h3>
+          <p>{{excerpt description}}</p>
+        </article>
+      {{/each}}
+    </div>
+  </div>
+</section>
