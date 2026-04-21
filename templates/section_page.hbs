@@ -1,13 +1,7 @@
 <section class="quick-links">
-  <div class="container">
+  <div class="container card">
     <h1>{{section.name}}</h1>
-    <div class="cards">
-      {{#each articles}}
-        <article class="card">
-          <h3><a href="{{url}}">{{title}}</a></h3>
-          <p>{{excerpt body characters=120}}</p>
-        </article>
-      {{/each}}
-    </div>
+    <p>Conteúdos desta seção podem ser consultados pela busca da Central de Ajuda.</p>
+    <p><a class="btn btn--primary" href="{{help_center.url}}/hc/{{help_center.locale}}/search">Pesquisar artigos</a></p>
   </div>
 </section>

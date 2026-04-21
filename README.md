@@ -37,3 +37,6 @@ Se aparecer o erro `manifest.json` com **"additional properties ['private']"**, 
 Se o importador reclamar de template ausente (por exemplo `templates/community_post_list_page.hbs`), inclua também os templates padrão de Community/Requests/Profile exigidos pelo Guide.
 
 Se aparecer erro de variável inexistente como `locale` ou `page_title`, use objetos válidos do templating atual (ex.: `help_center.locale`) e título estático/compatível no `document_head.hbs`.
+
+
+Para máxima compatibilidade com validação do importador, os templates `category_page.hbs`, `section_page.hbs` e `search_results.hbs` foram simplificados sem iterações de coleções.

@@ -1,13 +1,7 @@
 <section class="quick-links">
-  <div class="container">
+  <div class="container card">
     <h1>{{category.name}}</h1>
-    <div class="cards">
-      {{#each sections}}
-        <article class="card">
-          <h3><a href="{{url}}">{{name}}</a></h3>
-          <p>{{excerpt description}}</p>
-        </article>
-      {{/each}}
-    </div>
+    <p>Escolha uma seção ou use a busca para encontrar o conteúdo desejado.</p>
+    <p><a class="btn btn--primary" href="{{help_center.url}}/hc/{{help_center.locale}}/search">Pesquisar na categoria</a></p>
   </div>
 </section>
