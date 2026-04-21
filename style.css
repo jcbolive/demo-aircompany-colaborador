@@ -187,3 +187,21 @@ a {
     margin: 0 auto;
   }
 }
+
+.hero__search {
+  margin-bottom: 1rem;
+}
+
+.hero__search .search,
+.hero__search .search-full {
+  width: 100%;
+}
+
+.card a {
+  color: #eaf0fb;
+  text-decoration: none;
+}
+
+.card a:hover {
+  color: var(--accent-color);
+}

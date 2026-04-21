@@ -1,13 +1,22 @@
+{{breadcrumbs}}
 <section class="quick-links">
   <div class="container">
-    <h1>Resultados para "{{query}}"</h1>
+    <h1>{{t 'results' query=query count=results_count}}</h1>
+    {{generative_answers}}
     <div class="cards">
-      {{#each results}}
+      {{#if results}}
+        {{#each results}}
+          <article class="card">
+            <h3><a href="{{url}}">{{title}}</a></h3>
+            <p>{{text}}</p>
+          </article>
+        {{/each}}
+      {{else}}
         <article class="card">
-          <h3><a href="{{url}}">{{title}}</a></h3>
-          <p>{{excerpt text characters=140}}</p>
+          <p>{{t 'no_results_unified_enter_keywords'}}</p>
         </article>
-      {{/each}}
+      {{/if}}
     </div>
+    {{pagination}}
   </div>
 </section>

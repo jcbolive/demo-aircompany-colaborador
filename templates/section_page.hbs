@@ -1,6 +1,8 @@
+{{breadcrumbs}}
 <section class="quick-links">
   <div class="container">
     <h1>{{section.name}}</h1>
+    {{#if section.description}}<p>{{section.description}}</p>{{/if}}
     <div class="cards">
       {{#each section.articles}}
         <article class="card">
@@ -9,5 +11,6 @@
         </article>
       {{/each}}
     </div>
+    {{pagination}}
   </div>
 </section>
