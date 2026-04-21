@@ -38,4 +38,11 @@ Se o importador reclamar de template ausente (por exemplo `templates/community_p
 
 Se aparecer erro de variável inexistente como `locale` ou `page_title`, use objetos válidos do templating atual (ex.: `help_center.locale`) e título estático/compatível no `document_head.hbs`.
 
-Se ocorrer erro em `section_page.hbs` dizendo que `articles` não existe, use `section.articles` (escopo correto do objeto da seção).
+
+Para máxima compatibilidade com validação do importador, os templates `category_page.hbs`, `section_page.hbs` e `search_results.hbs` foram simplificados sem iterações de coleções.
+
+## Abordagem atual
+
+O tema mantém os recursos nativos da Zendesk (busca e chamados) usando helpers oficiais como `search`, `request_form` e `request_list`, enquanto a customização fica concentrada no visual (CSS e assets).
+
+Se o importador indicar erro em `settings.instant_search`, remova o parâmetro `instant=settings.instant_search` do helper `search` (ou declare essa setting no `manifest.json`).
