@@ -4,13 +4,12 @@
     <h1>{{section.name}}</h1>
     {{#if section.description}}<p>{{section.description}}</p>{{/if}}
     <div class="cards">
-      {{#if section.articles}}
-        {{#each section.articles}}
-          <article class="card">
-            <h3><a href="{{url}}">{{title}}</a></h3>
-          </article>
-        {{/each}}
-      {{/if}}
+      {{#each section.articles}}
+        <article class="card">
+          <h3><a href="{{url}}">{{title}}</a></h3>
+          <p>{{excerpt body characters=120}}</p>
+        </article>
+      {{/each}}
     </div>
     {{pagination}}
   </div>
