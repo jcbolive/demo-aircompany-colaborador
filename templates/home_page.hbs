@@ -1,0 +1,36 @@
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <h1>{{settings.hero_title}}</h1>
+      <p>{{settings.hero_subtitle}}</p>
+      <div class="hero__search">{{search submit=false class='search search-full'}}</div>
+      <div class="hero__actions">
+        {{link 'new_request' class='btn btn--primary'}}
+        <a class="btn btn--ghost" href="{{help_center.url}}/hc/{{help_center.locale}}/search">Pesquisar artigos</a>
+      </div>
+    </div>
+
+    <img class="hero__art" src="{{asset 'hero-air.svg'}}" alt="Equipe AIR colaborando">
+  </div>
+</section>
+
+<section class="quick-links">
+  <div class="container cards">
+    {{#each categories}}
+      {{#if ../has_multiple_categories}}
+        <article class="card">
+          <h3><a href="{{url}}">{{name}}</a></h3>
+          <p>{{excerpt description}}</p>
+        </article>
+      {{else}}
+        {{#each sections}}
+          <article class="card">
+            <h3><a href="{{url}}">{{name}}</a></h3>
+            <p>{{excerpt description}}</p>
+          </article>
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+  <div class="container">{{pagination}}</div>
+</section>
