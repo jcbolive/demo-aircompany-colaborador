@@ -1,0 +1,42 @@
+{
+  "name": "AIR Help Center",
+  "author": "AIR",
+  "version": "1.0.0",
+  "api_version": 3,
+  "default_locale": "pt-br",
+  "settings": [
+    {
+      "label": "Brand",
+      "variables": [
+        {
+          "identifier": "brand_color",
+          "type": "color",
+          "label": "Cor principal",
+          "description": "Cor primária do tema",
+          "value": "#0D1B34"
+        },
+        {
+          "identifier": "accent_color",
+          "type": "color",
+          "label": "Cor de destaque",
+          "description": "Cor para botões e links",
+          "value": "#2CC7E8"
+        },
+        {
+          "identifier": "hero_title",
+          "type": "text",
+          "label": "Título do destaque",
+          "description": "Título da seção principal",
+          "value": "Bem-vindo à Central de Ajuda AIR"
+        },
+        {
+          "identifier": "hero_subtitle",
+          "type": "text",
+          "label": "Subtítulo do destaque",
+          "description": "Texto de apoio da seção principal",
+          "value": "Encontre respostas, abra chamados e acompanhe novidades do produto."
+        }
+      ]
+    }
+  ]
+}
