@@ -1,0 +1,13 @@
+<section class="quick-links">
+  <div class="container">
+    <h1>Resultados para "{{query}}"</h1>
+    <div class="cards">
+      {{#each results}}
+        <article class="card">
+          <h3><a href="{{url}}">{{title}}</a></h3>
+          <p>{{excerpt text characters=140}}</p>
+        </article>
+      {{/each}}
+    </div>
+  </div>
+</section>
