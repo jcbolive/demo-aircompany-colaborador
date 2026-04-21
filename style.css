@@ -1,6 +1,6 @@
 :root {
-  --brand-color: {{settings.brand_color}};
-  --accent-color: {{settings.accent_color}};
+  --brand-color: $brand_color;
+  --accent-color: $accent_color;
   --text-color: #eaf0fb;
   --bg-color: #030711;
   --surface-color: #0b1224;
