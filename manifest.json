@@ -35,6 +35,13 @@
           "label": "Subtítulo do destaque",
           "description": "Texto de apoio da seção principal",
           "value": "Encontre respostas, abra chamados e acompanhe novidades do produto."
+        },
+        {
+          "identifier": "instant_search",
+          "type": "checkbox",
+          "label": "Busca instantânea",
+          "description": "Ativa sugestões durante digitação no campo de busca",
+          "value": true
         }
       ]
     }
