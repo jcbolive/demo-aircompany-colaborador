@@ -1,7 +1,22 @@
+{{breadcrumbs}}
 <section class="quick-links">
-  <div class="container card">
-    <h1>Busca</h1>
-    <p>Use a pesquisa da Central de Ajuda para localizar artigos e tópicos.</p>
-    <p><a class="btn btn--primary" href="{{help_center.url}}/hc/{{help_center.locale}}/search">Abrir pesquisa</a></p>
+  <div class="container">
+    <h1>{{t 'results' query=query count=results_count}}</h1>
+    {{generative_answers}}
+    <div class="cards">
+      {{#if results}}
+        {{#each results}}
+          <article class="card">
+            <h3><a href="{{url}}">{{title}}</a></h3>
+            <p>{{text}}</p>
+          </article>
+        {{/each}}
+      {{else}}
+        <article class="card">
+          <p>{{t 'no_results_unified_enter_keywords'}}</p>
+        </article>
+      {{/if}}
+    </div>
+    {{pagination}}
   </div>
 </section>

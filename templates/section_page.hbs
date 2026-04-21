@@ -1,7 +1,17 @@
+{{breadcrumbs}}
 <section class="quick-links">
-  <div class="container card">
+  <div class="container">
     <h1>{{section.name}}</h1>
-    <p>Conteúdos desta seção podem ser consultados pela busca da Central de Ajuda.</p>
-    <p><a class="btn btn--primary" href="{{help_center.url}}/hc/{{help_center.locale}}/search">Pesquisar artigos</a></p>
+    {{#if section.description}}<p>{{section.description}}</p>{{/if}}
+    <div class="cards">
+      {{#if section.articles}}
+        {{#each section.articles}}
+          <article class="card">
+            <h3><a href="{{url}}">{{title}}</a></h3>
+          </article>
+        {{/each}}
+      {{/if}}
+    </div>
+    {{pagination}}
   </div>
 </section>

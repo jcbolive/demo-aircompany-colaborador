@@ -40,3 +40,7 @@ Se aparecer erro de variável inexistente como `locale` ou `page_title`, use obj
 
 
 Para máxima compatibilidade com validação do importador, os templates `category_page.hbs`, `section_page.hbs` e `search_results.hbs` foram simplificados sem iterações de coleções.
+
+## Abordagem atual
+
+O tema mantém os recursos nativos da Zendesk (busca e chamados) usando helpers oficiais como `search`, `request_form` e `request_list`, enquanto a customização fica concentrada no visual (CSS e assets).

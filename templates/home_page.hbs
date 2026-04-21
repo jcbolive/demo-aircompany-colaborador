@@ -3,8 +3,9 @@
     <div>
       <h1>{{settings.hero_title}}</h1>
       <p>{{settings.hero_subtitle}}</p>
+      <div class="hero__search">{{search submit=false instant=settings.instant_search class='search search-full'}}</div>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="{{help_center.url}}/hc/{{help_center.locale}}/requests/new">Falar com suporte</a>
+        {{link 'new_request' class='btn btn--primary'}}
         <a class="btn btn--ghost" href="{{help_center.url}}/hc/{{help_center.locale}}/search">Pesquisar artigos</a>
       </div>
     </div>
@@ -15,19 +16,21 @@
 
 <section class="quick-links">
   <div class="container cards">
-    <article class="card">
-      <h3>Primeiros passos</h3>
-      <p>Guias rápidos para configurar sua conta e começar a operar.</p>
-    </article>
-
-    <article class="card">
-      <h3>Pagamentos e faturamento</h3>
-      <p>Dúvidas sobre cobrança, notas e histórico financeiro.</p>
-    </article>
-
-    <article class="card">
-      <h3>Status e incidentes</h3>
-      <p>Acompanhe manutenção programada e disponibilidade da plataforma.</p>
-    </article>
+    {{#each categories}}
+      {{#if ../has_multiple_categories}}
+        <article class="card">
+          <h3><a href="{{url}}">{{name}}</a></h3>
+          <p>{{excerpt description}}</p>
+        </article>
+      {{else}}
+        {{#each sections}}
+          <article class="card">
+            <h3><a href="{{url}}">{{name}}</a></h3>
+            <p>{{excerpt description}}</p>
+          </article>
+        {{/each}}
+      {{/if}}
+    {{/each}}
   </div>
+  <div class="container">{{pagination}}</div>
 </section>
