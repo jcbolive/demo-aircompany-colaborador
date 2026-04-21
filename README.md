@@ -35,3 +35,5 @@ Tema customizado da Central de Ajuda para o ambiente Zendesk Guide, com identida
 Se aparecer o erro `manifest.json` com **"additional properties ['private']"**, remova a chave `private` do arquivo. O schema de tema do Guide não aceita essa propriedade.
 
 Se o importador reclamar de template ausente (por exemplo `templates/community_post_list_page.hbs`), inclua também os templates padrão de Community/Requests/Profile exigidos pelo Guide.
+
+Se aparecer erro de variável inexistente como `locale` ou `page_title`, use objetos válidos do templating atual (ex.: `help_center.locale`) e título estático/compatível no `document_head.hbs`.
